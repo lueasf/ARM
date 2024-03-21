@@ -1,0 +1,86 @@
+FAST ASSEMBLY 
+
+ 
+
+CM 1 - Hardware 
+
+Les bus : Le bus d'adresse indique où se trouvent les données, tandis que le bus de données les transporte. 
+Ils relient le CPU avec la mémoire, la carte graphique et les autres périphériques. 
+
+Fun facts : Dans un 32 bits, il y a 4 Go de RAM max et dans un 64 bits, il y a 16 Eo. 
+
+Explication : Dans un système info avec un processeur 32 bits, chaque adresse mémoire est représentée par 32 bits. 
+Cela signifie qu'il y a potentiellement 2^32 adresses différentes. Chaque adresse mémoire pointe vers un octet 
+spécifique dans la RAM. On a donc 2^32 * 8 bits = 4 Go de RAM au maximum. Même calcul pour le 64 bits. 
+Sous linux, pour voir quel type de processeur on peut taper la commande uname –m dans le terminal. 
+
+La machine de Turing, capable de tout faire, a 2 mémoires. John Von Neumann a eu l’idée de combiner les deux mémoires. 
+Ainsi, les instructions deviennent des données comme les autres. 
+
+Pour faire ses calculs, le CPU a besoin d’une mémoire temporaire qui sont les registres et qui interne au CPU. 
+Le CPU lui, ne comprends que le binaire, étant assez compliqué d’écrire en binaire, l’assembleur a été créé pour
+nommer des instructions binaires avec des “mnémoniques”. 
+
+Ex : MOV r0, #10 équivaut à 00001010 00000000 10100010 11100011 en binaire. 
+
+ 
+
+Il y a de nos jour 2 grandes familles de CPU : Intel et ARM (I5, I7 ET adm RYZEN 5000 ont les mêmes 
+formats d’instructions donc le même assembleur). Ainsi un amd6’ ne tournera pas sur une machine arm64. 
+
+CISC : Complex Instruction Set Computer (archi initiale, actuelle de Intel )  
+RISC : Reduced Instruction Set Computer (archi ARM ) 
+Histoire : AMD a été le premier a développé l’architecture x86_64, ils on été suivi par Intel qui à repris 
+la meme architecture et a dominé le marché. 
+
+ARM64 fait référence à l'architecture 64 bits des processeurs conçus par ARM Holdings. 
+Ces processeurs sont largement utilisés dans les appareils mobiles tels que les smartphones et 
+les tablettes, ainsi que dans d'autres appareils embarqués tels que les systèmes embarqués, les 
+appareils IoT (Internet des objets) et les serveurs. Les macs (processeur M1) sont sur ARM, les Raspberry Pi aussi. 
+
+Dans ce cours, nous utilisons ARM32 Bits. VisUAL est un éditeur de texte qui permet de rentrer de l’assembleur ARM32 bits (RISC). 
+
+
+CM 2 – Data & Mémoire 
+
+Il y a les vraies instructions et les pseudo-instructions. Les pseudos sont les plus utilisées,
+elles gèrent les données et leur place en mémoire. 
+
+EQU ; c’est un copier coller version assembleur. 
+VAL1   DCD     10 ; definition de val: ds val1 on met l'adresse mémoire de la valeur 10. 
+(ADR r0, VAL1; dans le registre r0 on met l’adresse mémoire de VAL1) 
+RES    FILL    4 ; réservation d’un espace mémoire de 4 octets. 
+LDR     r0, =0xFF00FF00  ;on met cette valeur dans r0 (en décimal : 4278255360) 
+
+ 
+
+Problématique : Les instructions RISC, on une taille de 32bits, on se demande comment rentrer 
+de instructions et data qui font plus de 32bits ? 
+Réponse : on fait un décalage. Pour #VAL = 0b1011 10010000, au lieu de perdre de l’espace 
+avec les derniers 0. Il y a un décalage de 5 = 0101 d’ou : MOV r0, #VAL se trouve en binaire en : 1010 - 10111001 (décalage - #Val). 
+
+C’est quoi les Indiens? Les grands Indiens c’est le tablau de mémoire de gauche à droite de 
+haut en bas (Le poids fort en premier). Les  petits Indiens c’est la meme chose mais dans le 
+sens opposé (Le poids le plus faible en premier = en bas à droite). 
+
+ARM est dit bytesexual car il peut se configurer en little ou big Endian. 
+Mais par Défaut il est en little Endian. 
+Fun fact : Les protocoles réseaux comme TCP et IP sont en Big Endian. 
+
+
+Intructions :  
+MOV rx, ry ; on met la valeur ry dans rx. 
+VAL1 DCD 10; défition de valeur en dur 
+ADR r0, VAL1; Dans r0, on met l’adresse mém de val1 
+LDR r0, [r0];  on met la val qui se trouve à l’adresse stoqué dans r0 dans r0; 
+LDR rx, [ry, OFFSET] ;  la meme chose avec un décalage 
+
+ 
+CM 3 
+C'est quoi la MMU : la Memory Management Unit, est une puce en charge de l’accès à la mémoire, intégré ou pas, au CPU. 
+Il fait correspondre les adresses virtuelles et les adresses réelles. Lorsque on cherche à allouer de la mémoire, 
+le MMU “décide” si on accède à la RAM ou à un autre périphérique. Si la RAM est pleine, on peut utiliser le disque 
+dur mais c’est plus lent. Il y a aussi le swap (sous Linux), si on utilise le swap, c’est mauvais signe... 
+En utilisant la commande htop dans le terminal, on peut voir la répartition des process etc.  
+La mémoire : se compose de la pile, du tas et et une autre zone. La pile commence tout en haut et descend en fonction des besoins. 
+Le tas à une gestion dynamique. 
