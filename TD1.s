@@ -18,12 +18,12 @@ RES  FILL 4 ; RESERVATION D'UN ESPACE MÉMOIRE de 4 octets
      ADR r1,VAL2
      ADR r2,RES
 
-     LDR r3, [r0] ; dans r3, on stoque la valeur de r0, qui est donc la valeur de l'adresse mémoire, qu est 10
+     LDR r3, [r0] ; dans r3, on stoque la valeur qui est contenu à l'adresse de r0, qui est donc la valeur de l'adresse mémoire, qu est 10
      LDR r4, [r1] ; pareil
 
 JUMP ADD r5, r3, r4 ; on fait la somme des valeurs dans r3 et r4, on met le tout dans r5
 
-     STR r5, [r2] ;dans r2, on écrit l'adresse mémoire contenue dans r5, c'est l'inverse de LDR.
+     STR r5, [r2] ; on met la val r5 à l'adresse mémoire du r2 c'est l'inverse de LDR.
 
      END ; pseudo commande, seul ADR, LDR et STR sont des vrais "commandes" qui discutent avec le CPU
      
