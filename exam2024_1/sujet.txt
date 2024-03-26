@@ -1,0 +1,29 @@
+## Question 0 
+
+Inscrivez dans le fichier réponse : 
+- votre nom et prénom
+- le login du compte d'examen
+- l'adresse IP de la machine de l'école (en 100.xxx.xxx.xxx)
+
+## Question 1
+
+Il y a 2 erreurs de traduction du fichier C en fichier assembleur. 
+Pour chacune de ces 2 erreurs, indiquez dans le fichier assembleur : 
+- le numéro de la ligne assembleur qui est fausse
+- la correction à apporter
+
+## Question 2 
+
+En suivant le formalisme de la pile déjà commencée dans le fichier reponse, complétez le schéma de la pile juste après la toute première execution de la ligne 37 du fichier C, juste avant le retour de la fonction func1 et le dépilage du stack frame (on doit encore etre dans le stack frame de la fonction func1)
+
+N'oubliez pas de mettre à jour BP et SP (qui ne sont donnés qu'à titre d'exemple dans la pile déjà écrite)
+
+## Question 3
+
+Même question que la question 2, mais cette fois-ci en se placant juste après la toute première execution de la ligne 41 du fichier C, juste avant le retour de la fonction func2 et le dépilage du stack frame (on doit encore etre dans le stack frame de la fonction func2)
+
+N'oubliez pas de mettre à jour BP et SP (qui ne sont donnés qu'à titre d'exemple dans la pile déjà écrite)
+
+## Question 4
+
+Si on décommente la ligne 14, quelle est la valeur affichée à l'écran ? (Il est bien sur interdit de compiler le fichier C pour répondre à cette question).

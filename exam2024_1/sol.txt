@@ -1,0 +1,83 @@
+Question 1
+- erreur 1 : numéro de la ligne en erreur : 49
+- erreur 1 : correction de la ligne : BGT F1
+- erreur 2 : numéro de la ligne en erreur : 95
+- erreur 2 : correction de la ligne : SUB r0, r1, r0
+
+Question 2
+
+Adresse   Valeur     Nom      Signification     
+
+FF000000 ----------------------------------         
+FEFFFFFC      10         a   variable locale main
+FEFFFFF8       3         b   variable locale main
+FEFFFFF4       0         c   variable locale main  
+FEFFFFF0       7         a   param 1 split         
+FEFFFFEC       3         b   param 2 split              
+FEFFFFE8                     valeur de retour de split
+FEFFFFE4                     sauvegarde r0, r1, BP, LR - split
+FEFFFFE0                     idem
+FEFFFFDC                     idem
+FEFFFFD8                     idem
+FEFFFFD4       1     count   variable locale split
+FEFFFFD0       7         c   variable locale split
+FEFFFFCC      10         a   param 1 result
+FEFFFFC8       3         b   param 2 result
+FEFFFFC4       7             valeur de retour de result
+FEFFFFC0  0xFEFFFFF0    &a   param 1 func1
+FEFFFFBC       3         b   param 2 func1
+FEFFFFB8                     valeur de retour de func1
+FEFFFFB4                     sauvegarde r0, r1, BP, LR - split
+FEFFFFB0                     idem
+FEFFFFAC                     idem
+FEFFFFA8                     idem                   SP BP
+
+
+Question 3
+
+Adresse   Valeur     Nom      Signification     
+
+FF000000 ----------------------------------     
+FEFFFFFC      10         a   variable locale main
+FEFFFFF8       3         b   variable locale main
+FEFFFFF4       0         c   variable locale main  
+FEFFFFF0       1         a   param 1 split         
+FEFFFFEC       3         b   param 2 split              
+FEFFFFE8                     valeur de retour de split
+FEFFFFE4                     sauvegarde r0, r1, BP, LR - split
+FEFFFFE0                     idem
+FEFFFFDC                     idem
+FEFFFFD8                     idem 
+FEFFFFD4       4     count   variable locale split
+FEFFFFD0      -2         c   variable locale split
+FEFFFFCC      10         a   param 1 result
+FEFFFFC8       3         b   param 2 result
+FEFFFFC4       7             valeur de retour de result
+FEFFFFC0  0xFEFFFFF0    &a   param 1 func1
+FEFFFFBC       3         b   param 2 func1
+FEFFFFB8                     valeur de retour de func1
+FEFFFFB4       7         a   param 1 result 
+FEFFFFB0       3         b   param 2 result             
+FEFFFFAC       4             valeur de retour de result         
+FEFFFFA8  0xFEFFFFF0    &a   param 1 func1               
+FEFFFFA4       3         b   param 2 func1
+FEFFFFA0                     valeur de retour de func1
+FEFFFF9C       4         a   param 1 result    
+FEFFFF98       3         b   param 2 result
+FEFFFF94       1             valeur de retour de result
+FEFFFF90  0xFEFFFFF0    &a   param 1 func1  
+FEFFFF8C       3         b   param 2 func1
+FEFFFF88                     valeur de retour de func1
+FEFFFF84       1         a   param 1 result
+FEFFFF80       3         b   param 2 result
+FEFFFF7C      -2             valeur de retour de result
+FEFFFF78       1         a   param 1 func2
+FEFFFF74  0xFEFFFFEC    &B   param 2 func2
+FEFFFF70                     valeur de retour de fun2
+FEFFFF6C                     sauvegarde r0, r1, BP, LR - fun2
+FEFFFF68                     idem
+FEFFFF64                     idem
+FEFFFF60                     idem                   SP BP
+
+Question 4
+Valeur affichée : 5

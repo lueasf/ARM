@@ -2,7 +2,8 @@
 
 
 ; registres importants
-;SP = 13 = stack pointer
+r11 = fp = frame pointer, pointe sur le début de la pile, avant les var locales.
+;SP = 13 = stack pointer, pointe toujours sur le sommet de la pile
 ;LR = 14 = Link register, ce qu'on garde en mémoire
 ;PC = 15 = Program counter , instruction suivante
 

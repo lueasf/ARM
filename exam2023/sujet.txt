@@ -1,0 +1,13 @@
+## Question 1
+
+Remplissez le schéma de la pile dans le fichier réponse lorsque le programme assembleur est à la fin du dernier appel de la récursion de la fonction "transform", soit à la ligne 39 du dernier appel, juste avant les retours et les dépilages de la récursion.
+
+Suivez le formalisme de la pile déjà commencée dans le fichier reponse. Ajoutez les lignes nécessaires.
+
+## Question 2
+
+En fait il y a une erreur de traduction du fichier C dans le fichier ASM. Indiquez dans le fichier réponse les numéros des lignes fausses du fichier ASM.
+
+## Question 3
+
+Indiquez par quelles lignes d'assembleur il faudrait remplacer les lignes fausses indiquées ci-dessus pour que le programme soit correct.
