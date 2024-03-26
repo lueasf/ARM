@@ -1,6 +1,10 @@
 FAST ASSEMBLY 
 
- 
+
+GE	N = V	Greater than or equal, signed
+LT	N != V	Less than, signed
+GT	Z = 0 and N = V	Greater than, signed
+LE	Z = 1 and N != V Less than or equal, signed
 
 CM 1 - Hardware 
 
