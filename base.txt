@@ -33,3 +33,9 @@ CMP r1, r2 : compare r1 et r2, met à jour les flags
 ADDNE r3, r4, r5 : si le flag n'est pas égal, on fait l'addition : r3 = r4 + r5
 SUBEQ r3, r4, r5 : si le flag est égal, on fait la soustraction : r3 = r4 - r5
 MOVNE r3, r4 : si le flag n'est pas égal, on fait le move : r3 = r4
+ANDS r3, r4, r5 : fait l'opération bit à bit et stoque le résultat dans r3, met à jour les flags
+ANDS r0, 5, #1 = r0 0b101 & 0b001 = 0b001, Z = 0, N = 0, V = 0
+Z = 0 car le resultat n'est pas nul
+N = 0 car le bit de signe est 0
+V = 0 car il n'y a pas de débordement
+C = 0 car il n'y a pas de retenue
