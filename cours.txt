@@ -1,15 +1,6 @@
 FAST ASSEMBLY 
 
 
-GE	N = V	Greater than or equal, signed
-LT	N != V	Less than, signed
-GT	Z = 0 and N = V	Greater than, signed
-LE	Z = 1 and N != V Less than or equal, signed
-
-SUB     r13, r13, #4 dans un programme ça permet 
-de réserver de la place pour 2 variables. Pour la var 
-de retour par exemple.
-
 CM 1 - Hardware 
 
 Les bus : Le bus d'adresse indique où se trouvent les données, tandis que le bus de données les transporte. 

@@ -1,0 +1,29 @@
+; Registres importants
+r11 = BP = Base Pointer = FP = frame pointer, pointe sur le début de la pile, avant les var locales.
+;SP = 13 = stack pointer, pointe toujours sur le sommet de la pile
+;LR = 14 = Link register, ce qu'on garde en mémoire
+;PC = 15 = Program counter , instruction suivante
+
+;BL = Branch with Link, on va au label appelé
+
+
+BGE	N = V	Greater than or equal, signed
+BLT	N != V	Less than, signed
+BGT	Z = 0 and N = V	Greater than, signed
+BLE	Z = 1 and N != V Less than or equal, signed
+BEQ    Z = 1	Equal
+
+SUB   r13, r13, #4 dans un programme ça permet de réserver de la place pour 1 variable. 
+
+OP:
+LSL : << , 100 << 2 = 10000 
+LSR : >> , 100 >> 2 = 1  (ASR : conserve le bit de signe le plus à gauche)
+ASR : >> , 0b1101 >> 1 = 0b1110 et 0b0011 >> 1 = 0b0001
+
+MUL r2, r3, r4 : r2 = r3 * r4
+MLA r2, r0, r1, r2 : r2 = r0 * r1 + r2
+MULT r2, r3, r4 : r2 = r3 * r4, r3 = r3 * r4
+
+AND r2, r3, r4 : r2 = r3 & r4 (opération bit à bit : exemple 0b1100 & 0b1010 = 0b1000)
+ORR r2, r3, r4 : r2 = r3 | r4 (opération bit à bit : exemple 0b1100 | 0b1010 = 0b1110)
+EOR r2, r3, r4 : r2 = r3 ^ r4 (opération bit à bit : exemple 0b1100 ^ 0b1010 = 0b0110) (Si c'ets le même bit, c'est 0, sinon 1)
