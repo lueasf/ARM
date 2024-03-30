@@ -1,0 +1,59 @@
+Question 0x00
+
+- Lucie Correia -
+- exam604  -
+- 100.64.227.57 , locale : 172.17.0.1  -
+
+Question 0x01
+les deux
+
+Question 0x02
+il faut d'abord traduire les instructions en nombres 32 bits.
+il faut charger les nombres 32 bits en mémoire, dans les adresses basses.
+
+Question 0x03
+les appels de fonctions correspondent à une pile, quand on sort d'une fonction on la dépile
+
+
+Question 0x04
+parce que les instructions ont une taille de 32 bits
+
+Question 0x11
+
+- erreur 1 : numéro de la ligne en erreur : 89
+- erreur 1 : correction de la ligne : CMP	r0, #30 devient 	CMP 	r0,#3 CAR on compare i et 3 dans la boucle
+- erreur 2 : numéro de la ligne en erreur : 76
+- erreur 2 : correction de la ligne : LSR     R0, R0, #4 devient LSL     R1, R1, #4, car inversion
+
+Question 0x12 
+
+Adresse     Valeur      Nom              Signification     
+FF000000 ---------------------------------------------------  
+FEFFFFFC      61        Kiedis           variable locale main 
+FEFFFFF8	54 modifié en 70	Frusciante	var locale main
+FEFFFFF4 	61 modifié en 77	Flea		var locale de main
+FEFFFFF0 	62	Smith		var locale de main
+FEFFFFEC	61	red(Kiedis)		paramètre 1 de funk 
+FEFFFFE8 	FEFFFFF4	hot(&Flea)	paramètre2 de funk
+FEFFFFE4 	FEFFFFF8	chili(&Frusciante)	paramètre3 de funk
+FEFFFFE0 	62	pepper(Smith)	paramètre4 de funk
+FEFFFFDC 	100		On store LR=r14, r11, r1 et r0
+FEFFFFD8	FF000000 	idem
+FEFFFFD4 	0		idem
+FEFFFFD0 	62		idem
+FEFFFFCC 	1	music		var locale de funk
+FEFFFFC8	78	concert		idem (81 en fin d'exec)
+FEFFFFC4 	1	music		paramètre1 de cant_stop
+FEFFFFC0 	16	valeur de retour de cant_stop
+FEFFFFBC 	81	on store LR, r11, r0
+FEFFFFB8 	FEFFFFD0-> modifié en 81	idem
+FEFFFFB4 	252		idem (1)-> modifié en 252 mais LR 
+FEFFFFB0 	FEFFFFD0	on store r11, r1, r0
+FEFFFFAC	62 		idem
+FEFFFFA8 	78		idem					BP
+FEFFFFA4	0->1->2->3	i	var locale i pour la boucle	SP
+
+Question 0x13
+
+Valeur affichée : 
+270

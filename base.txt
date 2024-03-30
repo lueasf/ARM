@@ -27,3 +27,9 @@ MULT r2, r3, r4 : r2 = r3 * r4, r3 = r3 * r4
 AND r2, r3, r4 : r2 = r3 & r4 (opération bit à bit : exemple 0b1100 & 0b1010 = 0b1000)
 ORR r2, r3, r4 : r2 = r3 | r4 (opération bit à bit : exemple 0b1100 | 0b1010 = 0b1110)
 EOR r2, r3, r4 : r2 = r3 ^ r4 (opération bit à bit : exemple 0b1100 ^ 0b1010 = 0b0110) (Si c'ets le même bit, c'est 0, sinon 1)
+
+
+CMP r1, r2 : compare r1 et r2, met à jour les flags
+ADDNE r3, r4, r5 : si le flag n'est pas égal, on fait l'addition : r3 = r4 + r5
+SUBEQ r3, r4, r5 : si le flag est égal, on fait la soustraction : r3 = r4 - r5
+MOVNE r3, r4 : si le flag n'est pas égal, on fait le move : r3 = r4

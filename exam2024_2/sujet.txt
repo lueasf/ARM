@@ -1,0 +1,99 @@
+Examen - ASM
+Examen d'Assembleur ARM 32 bits - Part 2 - 2023-2024 / durée : 1h30
+Communications interdites
+Il est formellement interdit de communiquer avec un autre etre humain et/ou de partager un document ou une information.
+Actes non autorisés
+En application de la règle précédente, vous n'avez pas le droit d'accéder aux sites permettant de communiquer et/ou d'échanger des documents. Vous n'avez ainsi pas le droit d'aller sur Facebook (messenger), Discord, Google Drive, ...
+Afin de vérifier qu'il n'y a eu aucune communication avec un autre etre humain, l'historique de votre navigateur web pourra etre examiné. Vous n'avez donc pas le droit de supprimer l'historique de votre navigateur web (étant donné que c'est celui du compte exam que vous etes en train d'utiliser).
+Documents autorisés
+Vous avez droit à tous vos documents et notes, à (presque) tout internet et même à toute version d'IA gratuite, comme ChatGPT 3.5, à condition de respecter les regles précedentes.
+Par soucis d'équité, vous n'avez pas le droit à des versions payantes d'IA - et donc pas à ChatGPT 4.
+
+Structure
+L’examen est divisé en 2 sections :
+
+Section instaban :
+Ces questions, très simples, correspondent à des savoirs essentiels, les bases de ce module, indispensables pour valider le module. Ces questions ne rapportent pas de points, mais ne pas répondre ou avoir faux à l’une de ces réponses implique l’invalidation directe du module et l’arrêt direct de la correction.
+Section Story Mode :
+Les questions de cette section rapportent des points dans le barème standard, sur 20.
+
+
+Enoncé
+Vous avez dans le répertoire 3 fichiers :
+
+"code.c", un programme en C
+"code.s", sa traduction en assembleur
+"reponses.txt", le fichier sur lequel vous devez répondre
+
+NE SERONT PRISE EN COMPTE QUE LES REPONSES INSCRITES DANS LE FICHIER "reponses.txt", ET POUSSEES SUR LE GITLAB DE L'ECOLE.
+Vous aurez besoin de lancer l'utilitaire suivant :
+/opt/VisUAL2/VisUAL2.1.7.0.AppImage
+Si une erreur apparait lors du premier lancement, ce n'est pas grave. Tuez le processus avec un CTRL-C et recommencez.
+
+Instaban
+
+Question 0x00
+Inscrivez dans le fichier réponse :
+
+votre nom et prénom
+le login du compte d'examen
+l'adresse IP de la machine de l'école (en 100.xxx.xxx.xxx)
+
+
+Question 0x01
+Avec un CPU ayant une architecture 32 bits, qu'avons-nous vu qui a typiquement une taille de 4 octets ?
+
+Le bus d'adresse
+le bus de données
+les deux
+le bus de 4h40 ?
+Recopiez la bonne ligne dans le fichier réponse.
+
+
+Question 0x02
+Lorsque j'execute un programme en assembleur :
+
+le CPU lit les instructions directement dans le fichier assembleur
+il faut d'abord traduire les instructions en nombres 32 bits
+il faut charger les instructions assembleur directement en mémoire, dans les adresses basses
+il faut charger les nombres 32 bits en mémoire, dans les adresses basses
+Recopiez la ou les bonnes lignes dans le fichier réponse.
+
+
+Question 0x03
+La structure de la pile a été inventée parce que :
+
+on peut empiler les allocations dynamiques de variables et gérer facilement la mémoire
+les instructions d'un programme se suivent donc c'est facile de les empiler
+les appels de fonctions correspondent à une pile, quand on sort d'une fonction on la dépile
+c'est très bien pour torturer les étudiants en ASM
+Recopiez la bonne ligne dans le fichier réponse.
+
+
+Question 0x04
+Pourquoi certaines valeurs sont interdites comme paramètres de certaines instructions assembleurs ARM 32 bits :
+
+parce que les instructions ont une taille de 32 bits
+parce qu'il n'y a généralement pas assez de mémoire
+parce que le CPU est en little endian
+parce que c'est géré par la MMU
+
+
+Story Mode
+
+Question 0x11
+Il y a 2 erreurs de traduction du fichier C en fichier assembleur.
+Pour chacune de ces 2 erreurs, indiquez dans le fichier assembleur :
+
+le numéro de la ligne assembleur qui est fausse
+la correction à apporter
+
+
+Question 0x12
+En considérant les 2 erreurs comme corrigées, et en suivant le formalisme de la pile déjà vu en TD et commencée dans le fichier reponse, complétez (et modifiez si besoin) le schéma de la pile juste avant l'execution de la ligne 45 du fichier C, avant la mise en place de la valeur de retour.
+Vous mettrez les valeurs des variables au même format qu'en C (en décimal ou en hexa), et les adresses en hexa.
+Vous ne mettrez pas les valeurs des registres sauvegardés, mais la signification de sauvegarde seulement - comme sur l'exemple donné en TD.
+N'oubliez pas de mettre à jour BP et SP (qui ne sont donnés qu'à titre d'exemple dans la pile déjà écrite)
+
+Question 0x13
+Si on décommente la ligne 14, quelle est la valeur affichée à l'écran ? (Il est bien sur interdit de compiler le fichier C pour répondre à cette question).

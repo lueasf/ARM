@@ -1,5 +1,13 @@
 FAST ASSEMBLY 
 
+RAPPEL :
+-Les bus de données et d'adresse ont une taille de 4 octets pour une CPU de 32 bits et de 8 octets pour une CPU de 64 bits.
+-Lorsque j'éxécute un porgramme en assembleur, il faut d'abord traduire les instructions en nombres 32 bits
+il faut charger les nombres 32 bits en mémoire, dans les adresses basses.
+-La structure de la pile a été inventée parce que les appels de 
+fonctions correspondent à une pile, quand on sort d'une fonction on la dépile
+-Pourquoi certaines valeurs sont interdites comme paramètres de certaines instructions assembleurs ARM 32 bits :
+parce que les instructions ont une taille de 32 bits
 
 CM 1 - Hardware 
 
@@ -21,8 +29,6 @@ Le CPU lui, ne comprends que le binaire, étant assez compliqué d’écrire en 
 nommer des instructions binaires avec des “mnémoniques”. 
 
 Ex : MOV r0, #10 équivaut à 00001010 00000000 10100010 11100011 en binaire. 
-
- 
 
 Il y a de nos jour 2 grandes familles de CPU : Intel et ARM (I5, I7 ET adm RYZEN 5000 ont les mêmes 
 formats d’instructions donc le même assembleur). Ainsi un amd6’ ne tournera pas sur une machine arm64. 
