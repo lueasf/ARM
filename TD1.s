@@ -2,7 +2,7 @@
 
 ;Instructions simples : 
 ;MOV, ADD, SUB ( r2, r0, r1 cad dans r2 on met r0 – r1) 
-;LSL r4, r3, #3 ; dans r4 on met r3 décalé de 3 bits. 
+;LSL r4, r3, #3 ; dans r4 on met r3 décalé de 3 bits vers la gauche : 4 = 100 << 3 = 100000 = 32
 ;Nous avons les Labels à gauche. 
 ; mettre une valeur en dur : LDR rx = 0x...
 

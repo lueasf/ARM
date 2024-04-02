@@ -89,7 +89,7 @@ TRANSFORM
           STMFD   r13!, {r0, r1, r11, LR}
           MOV     r11, r13
           SUB     r13, r13, #4
-          LDR     r0, [r11, #4*4]
+          LDR     r0, [r11, #4*4] ;
           STR     r0, [r11, #-4]
           LDR     r0, [r11, #-4]
           CMP     r0, #0
@@ -97,7 +97,7 @@ TRANSFORM
           LDR     r0, [r11, #-4]
           LSR     r0, r0, #1
           STR     r0, [r11, #-4]
-          LDR     r0, [r11, #4*5]
+          LDR     r0, [r11, #4*5] ;; 
           LDR     r1, [r0]
           LDR     r0, [r11, #-4]
           ADD     r0, r0, r1
